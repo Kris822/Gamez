@@ -65,7 +65,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         for game in library {
             reviews.addGame(title: game["title"].stringValue,
                                 genre: game["genre"].stringValue,
-                                released: game["released"].intValue)
+                                released: game["released"].intValue,
+                                rating: game["rating"].intValue)
         }
     }
 }

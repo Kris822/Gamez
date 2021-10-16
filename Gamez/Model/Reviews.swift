@@ -12,8 +12,8 @@ class Reviews {
     
     var games = [Game]()
     
-    func addGame(title: String, genre: String, released: Int) {
-        games.append(Game(title: title, genre: GenreType.init(genre), released: released))
+    func addGame(title: String, genre: String, released: Int, rating: Int) {
+        games.append(Game(title: title, genre: GenreType.init(genre), released: released, rating: rating))
     }
     
     func games(for genreType: GenreType) -> [Game] {
