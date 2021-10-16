@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 
 class Game {
     
@@ -21,6 +23,21 @@ class Game {
         self.genre = genre
         self.released = released
         self.rating = rating
+    }
+    
+    func getRating(rating: Int) -> UIImage{
+        if rating == 1{
+            return UIImage(named: "oneStar")!
+        }
+        else if rating == 2{
+            return UIImage(named: "twoStar")!
+        }
+        else if rating == 3{
+            return UIImage(named: "threeStar")!
+        }
+        else{
+            return UIImage(named: "IconImage")!
+        }
     }
     
 }
