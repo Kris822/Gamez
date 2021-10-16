@@ -20,6 +20,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.title = "Games"
         if let genre = GenreType(rawValue: section) {
             return reviews.games(for: genre).count
         }
