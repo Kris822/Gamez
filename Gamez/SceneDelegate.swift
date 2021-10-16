@@ -21,9 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         loadGames()
-        if let vc = self.window?.rootViewController as? TableViewController {
+        if let navController = window?.rootViewController as? UINavigationController {
+         if let vc = navController.viewControllers.last as? TableViewController {
             vc.reviews = reviews
-        }
+         }
+         }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
